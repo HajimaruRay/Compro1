@@ -1,24 +1,49 @@
-#include<stdio.h>
+#include <stdio.h>
+#include <limits.h>
 
 void main()
 {
+    int Input[100];
+    int most = INT_MIN, min = INT_MAX, sum = 0, mostGroup = 0, minGroup = 0, Group = 0, AllSum = 0;
+    double Average = 0;
     int n;
 
-    scanf("%d",&n);
-
-    for (int i = 1;i <= n;i++)
+    while (1)
     {
-        for (int j = 1;j <= n;j++)
+        scanf("%d",&n);
+
+        if (n <= 0)
         {
-            if (i == 1 || i == n || j == 1 || j == n || j > 2 && j < n-1 && i > 2 && i < n-1)
-            {
-                printf("*");
-            }
-            else
-            {
-                printf(" ");
-            }
+            printf("%d %d\n",mostGroup,most);
+            printf("%d %d\n",minGroup,min);
+            printf("%.2f",Average);
+            break;
         }
-        printf("\n");
+        else
+        {
+            Group++;
+        }
+
+        for (int i = 0;i < n;i++)
+        {
+            scanf("%d",&Input[i]);
+            sum += Input[i];
+            
+        }
+        printf("%d\n",sum);
+
+        if (sum < min)
+        {
+            min = sum;
+            minGroup = Group;
+        }
+        if (sum > most)
+        {
+            most = sum;
+            mostGroup = Group;
+        }
+        AllSum += sum;
+        Average = (double)AllSum / (double)Group;
+        sum = 0;
     }
 }
