@@ -1,37 +1,37 @@
 #include <stdio.h>
 
+int number[100000];
 void main()
 {
-    int number,GetN;
-    int OI = 0,IO = 0,II = 0,OO = 0;
+    int OO = 0,OI = 0,IO = 0,II = 0;
 
-    while (1)
+    for(int i = 0;i < 100000;i++)
     {
-        
-        scanf("%d",&number);
-        if (number != 0 && number != 1)
+        scanf("%d",&number[i]);
+
+        if (number[i] != 0 && number[i] != 1)
         {
             break;
         }
-
-        if (GetN == 0 && number == 0)
+        else if (i >= 1)
         {
-            OO++;
+            if (number[i-1] == 0 && number[i] == 0)
+            {
+                OO++;
+            }
+            else if (number[i-1] == 0 && number[i] == 1)
+            {
+                OI++;
+            }
+            else if (number[i-1] == 1 && number[i] == 0)
+            {
+                IO++;
+            }
+            else if (number[i-1] == 1 && number [i] == 1)
+            {
+                II++;
+            }
         }
-        else if (GetN == 0 && number == 1 )
-        {
-            OI++;
-        }
-        else if (GetN == 1 && number == 0)
-        {
-            IO++;
-        }
-        else if (GetN == 1 && number == 1)
-        {
-            II++;
-        }
-        GetN = number;
     }
-
     printf("%d\n%d\n%d\n%d",OO,OI,IO,II);
 }
