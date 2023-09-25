@@ -48,7 +48,6 @@ void main()
     }
     spaceB = space;
     a+=2;
-    //printf("a = %dbaseA = %d",a,baseA);
     //down
     for (int i = a;i <= baseA;i++)
     {
@@ -59,7 +58,7 @@ void main()
             {
                 printf(" ");
             }
-            for (int j = 0;j < a-3;j++)
+            for (int j = 0;j < 3;j++)
             {
                 printf("%d",number);
             }
