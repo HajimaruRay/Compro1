@@ -11,7 +11,7 @@ void main()
     {
         for (int j = 1;j <= n;j++)
         {
-            if (i == 1 || i == n || j == 1 || j == n || i == count j || j == count1)
+            if (i == 1 || i == n || j == 1 || j == n || i == j || j == count1)
             {
                 printf("*");
             }
