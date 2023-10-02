@@ -3,7 +3,7 @@
 void main()
 {
     int a,b;
-    int free = 0,space = 0,count = 0,number = 0,baseA = 0,spaceB = 0;
+    int free = 0,space = 0,count = 0,number = 0,baseA = 0;
 
     scanf("%d%d",&a,&b);
 
@@ -31,7 +31,6 @@ void main()
         space++;
         a--;
     }
-    spaceB = space;
     a+=2;
     //down
     for (int i = a;i <= baseA;i++)
