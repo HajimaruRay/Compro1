@@ -20,7 +20,7 @@ void main()
     for (int i = 1;i < 100000;i++)
     {
         if (number[i] > 0)
-        {   
+        {
             printf("%d ",i);
         }
     }
