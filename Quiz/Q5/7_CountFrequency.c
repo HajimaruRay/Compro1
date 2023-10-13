@@ -11,7 +11,7 @@ void main()
     for (int i = 0;i < 100000;i++)
     {
         number[i] = 0;
-        countS[i] = 1;
+        countS[i] = 0;
     }
 
     for (int i = 0;i < n;i++)
@@ -26,6 +26,7 @@ void main()
                 {
                     number[j] = arr[i];
                     count++;
+                    countS[j]++;
                     break;
                 }
             }
@@ -35,8 +36,6 @@ void main()
                 break;
             }
         }
-
-        
     }
     printf("%d\n",count);
     for (int i = 0;i < count;i++)
