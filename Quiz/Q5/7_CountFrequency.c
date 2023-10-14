@@ -1,24 +1,24 @@
 #include <stdio.h>
 
-int arr[100000],number[100000],countS[100000];
+int arr[100000], number[100000], countS[100000];
 
 void main()
 {
     int n;
     int count = 0;
-    scanf("%d",&n);
+    scanf("%d", &n);
 
-    for (int i = 0;i < 100000;i++)
+    for (int i = 0; i < 100000; i++)
     {
         number[i] = 0;
         countS[i] = 0;
     }
 
-    for (int i = 0;i < n;i++)
+    for (int i = 0; i < n; i++)
     {
-        scanf("%d",&arr[i]);
+        scanf("%d", &arr[i]);
 
-        for (int j = 0;j < 100000;j++)
+        for (int j = 0; j < 100000; j++)
         {
             if (arr[i] != number[j])
             {
@@ -37,9 +37,9 @@ void main()
             }
         }
     }
-    printf("%d\n",count);
-    for (int i = 0;i < count;i++)
+    printf("%d\n", count);
+    for (int i = 0; i < count; i++)
     {
-        printf("%d %d\n",number[i],countS[i]);
+        printf("%d %d\n", number[i], countS[i]);
     }
 }
